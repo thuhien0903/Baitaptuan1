@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            height: 800px;
+            width: 1089px;
+            margin: 0 auto;
+            /* Căn giữa wrapper */
+            background-color: aliceblue;
+            border: 1px solid brown;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .top-menu {
+            height: 50px;
+            background-color: rgb(138, 187, 230);
+            border: 1px solid brown;
+        }
+        
+        .top-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Căn giữa các mục menu theo chiều dọc */
+            height: 100%;
+            /* Đảm bảo ul chiếm toàn bộ chiều cao của top-menu */
+        }
+        
+        .top-menu li {
+            margin: 0 15px;
+        }
+        
+        .top-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .top-menu a:hover {
+            color: #007bff;
+        }
+        
+        header {
+            height: 150px;
+            background-color: rgb(230, 175, 202);
+            border: 1px solid brown;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 200px);
+            /* Chiều cao của content = chiều cao wrapper - chiều cao top-menu và header */
+        }
+        
+        .menu-left {
+            width: 20%;
+            background-color: lightgray;
+            border: 1px solid brown;
+        }
+        
+        .content-l,
+        .content-r {
+            width: 40%;
+            background-color: lightgray;
+            border: 1px solid brown;
+        }
+        
+        footer {
+            height: 50px;
+            background-color: rgb(138, 187, 230);
+            border: 1px solid brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="top-menu">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <header>Đầu trang</header>
+        <div class="content">
+            <div class="menu-left"> left-menu </div>
+            <div class="content-l"> content-l </div>
+            <div class="content-r"> content-r </div>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>
